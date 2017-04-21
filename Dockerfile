@@ -21,7 +21,7 @@ ENV LANGUAGE=en_US.UTF-8
 RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - \
   && curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | tee /etc/apt/sources.list.d/msprod.list \
   && apt-get update -y \
-  && ACCEPT_EULA=Y apt-get install unixodbc-dev Rmssql-tools -y \
+  && ACCEPT_EULA=Y apt-get install unixodbc-dev mssql-tools -y \
   && rm -rf /var/lib/apt/lists/* \
   && apt-get clean -y
 
